@@ -2,7 +2,7 @@
 ## Project Overview
 An embedded system combining real-time clock (RTC), temperature sensing, IR remote control decoding, and graphical display on a PIC18F4620 microcontroller. The system displays time/temperature and responds to IR remote commands with visual/audio feedback.
 
-# Features 
+## Features 
 - Real-Time Clock Display: DS3231 RTC for accurate timekeeping
 - Temperature Monitoring: DS1621 sensor with Celsius/Fahrenheit conversion
 - IR Remote Control: NEC protocol decoding for 21-button remote
@@ -11,7 +11,7 @@ An embedded system combining real-time clock (RTC), temperature sensing, IR remo
 - LED Temperature Indicator: 7-color LED output based on temperature ranges
 - UART Debug Interface: Serial output for monitoring system status
 
-# Project Structure
+## Project Structure
 - main.c              #Main application logic
 - I2C.h / I2C.c       #I2C communication library
 - I2C_Support.h       #I2C helper functions
@@ -21,7 +21,7 @@ An embedded system combining real-time clock (RTC), temperature sensing, IR remo
 - DS3231_Support.c    #RTC interface
 - NEC_Decoder.c       #IR remote decoding logic
 
-# 🎮 IR Remote Button Mapping
+## 🎮 IR Remote Button Mapping
 
 | Button | HEX Code | Display Text | Color | Function | Notes |
 |--------|----------|--------------|-------|----------|-------|
@@ -45,9 +45,9 @@ An embedded system combining real-time clock (RTC), temperature sensing, IR remo
 | 8 | 0x5A | "#08" | ⚫ Black | Number 8 | Numeric input |
 | 9 | 0x42 | "#09" | ⚫ Black | Number 9 | Numeric input |
 
-# 🌡️ Temperature Visualization System
+## 🌡️ Temperature Visualization System
 
-## 📊 Temperature Range to LED Color Mapping
+### 📊 Temperature Range to LED Color Mapping
 
 This system maps ambient temperature ranges (°F) to specific LED color outputs using **PORTD** values. Each range corresponds to a visual color indication and descriptive temperature state.
 
@@ -62,7 +62,7 @@ This system maps ambient temperature ranges (°F) to specific LED color outputs 
 | 60°F – 69°F            | `0x60`      | Cyan      | 🔷     | Very Hot    | Green + Blue LEDs |
 | 70°F and Above         | `0x70`      | White     | ⚪     | Extreme     | All LEDs (Red + Green + Blue) |
 
-### 📝 Notes
+#### 📝 Notes
 - **PORTD values** correspond to bit-mapped LED outputs.
 - Composite colors are achieved by enabling multiple LED bits simultaneously.
 - The system provides a quick visual indication of temperature severity.
