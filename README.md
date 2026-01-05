@@ -12,12 +12,11 @@ An embedded system combining real-time clock (RTC), temperature sensing, IR remo
 - UART Debug Interface: Serial output for monitoring system status
 
 ## Project Structure
-project/
-├── main.c              # Main application logic
-├── I2C.h / I2C.c       # I2C communication library
-├── I2C_Support.h       # I2C helper functions
-├── Interrupt.h         # Interrupt configuration
-├── ST7735.h            # TFT display driver
-├── DS1621_Support.c    # Temperature sensor interface
-├── DS3231_Support.c    # RTC interface
-└── NEC_Decoder.c       # IR remote decoding logic
+- main.c              #Main application logic
+- I2C.h / I2C.c       #I2C communication library
+- I2C_Support.h       #I2C helper functions
+- Interrupt.h         #Interrupt configuration
+- ST7735.h            #TFT display driver
+- DS1621_Support.c    #Temperature sensor interface
+- DS3231_Support.c    #RTC interface
+- NEC_Decoder.c       #IR remote decoding logic
