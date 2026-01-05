@@ -20,3 +20,27 @@ An embedded system combining real-time clock (RTC), temperature sensing, IR remo
 - DS1621_Support.c    #Temperature sensor interface
 - DS3231_Support.c    #RTC interface
 - NEC_Decoder.c       #IR remote decoding logic
+
+# 🎮 IR Remote Button Mapping
+
+| Button | HEX Code | Display Text | Color | Function | Notes |
+|--------|----------|--------------|-------|----------|-------|
+| CH- | 0xA2 | "CH-" | 🔴 Red | Channel Down | Standard remote function |
+| CH0 | 0x62 | "CH0" | 🔴 Red | Channel Zero | Returns to channel 0 |
+| CH+ | 0xE2 | "CH+" | 🔴 Red | Channel Up | Increments channel |
+| PREV | 0x22 | "PRV" | 🔵 Blue | Previous | Navigates to previous item |
+| NEXT | 0x02 | "NXT" | 🔵 Blue | Next | Navigates to next item |
+| PLAY/PAUSE | 0xC2 | "P/P" | 🟢 Green | Play/Pause | Media control |
+| VOL- | 0xE0 | "VL-" | 🟣 Magenta | Volume Down | Decreases volume |
+| VOL+ | 0xA8 | "VL+" | 🟣 Magenta | Volume Up | Increases volume |
+| **EQ** | **0x90** | **"EQ0"** | **🟣 Magenta** | **Time Reset** | **Special: Resets RTC time** |
+| 0 | 0x68 | "#00" | ⚫ Black | Number 0 | Numeric input |
+| 1 | 0x98 | "#01" | ⚫ Black | Number 1 | Numeric input |
+| 2 | 0xB0 | "#02" | ⚫ Black | Number 2 | Numeric input |
+| 3 | 0x30 | "#03" | ⚫ Black | Number 3 | Numeric input |
+| 4 | 0x18 | "#04" | ⚫ Black | Number 4 | Numeric input |
+| 5 | 0x7A | "#05" | ⚫ Black | Number 5 | Numeric input |
+| 6 | 0x10 | "#06" | ⚫ Black | Number 6 | Numeric input |
+| 7 | 0x38 | "#07" | ⚫ Black | Number 7 | Numeric input |
+| 8 | 0x5A | "#08" | ⚫ Black | Number 8 | Numeric input |
+| 9 | 0x42 | "#09" | ⚫ Black | Number 9 | Numeric input |
