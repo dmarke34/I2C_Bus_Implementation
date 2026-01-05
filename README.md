@@ -115,5 +115,5 @@ Educational use — Developed for **ECE3301L Lab**
 ---
 
 ## 👥 Authors
-Developed as part of an embedded systems curriculum.  
-Codebase maintained for educational purposes.
+- Developed as part of an embedded systems curriculum  
+- Codebase maintained for educational purposes
