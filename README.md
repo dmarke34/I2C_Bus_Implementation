@@ -67,3 +67,53 @@ This system maps ambient temperature ranges (°F) to specific LED color outputs 
 - Composite colors are achieved by enabling multiple LED bits simultaneously.
 - The system provides a quick visual indication of temperature severity.
 
+## 🔄 Program Flow
+
+### Initialization
+- Setup peripherals
+- Initialize display
+- Configure RTC
+
+### Main Loop
+- Read time from **DS3231** (once per second)
+- Read temperature from **DS1621**
+- Update LED based on temperature
+- Check for IR remote input
+
+#### If a button is pressed:
+- Display button name with color coding
+- Activate buzzer for 1 second
+- Light status LED
+- If **EQ** button is pressed, reset RTC time
+
+---
+
+## 🚀 Future Enhancements
+- Add alarm functionality using RTC
+- Implement temperature logging to external memory
+- Create a menu system for configuration
+- Add battery backup monitoring
+- Implement power-saving sleep modes
+
+---
+
+## 📚 Learning Outcomes
+
+This project demonstrates:
+- Multi-peripheral integration (**I2C, SPI, UART, PWM**)
+- Real-time system design with timing constraints
+- Interrupt-driven architecture
+- Hardware abstraction and driver development
+- Temperature sensing and visualization
+- IR remote protocol decoding
+
+---
+
+## 📄 License
+Educational use — Developed for **ECE3301L Lab**
+
+---
+
+## 👥 Authors
+Developed as part of an embedded systems curriculum.  
+Codebase maintained for educational purposes.
